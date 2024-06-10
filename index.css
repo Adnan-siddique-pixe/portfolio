@@ -351,6 +351,53 @@ section {
     height: auto;
 
 }
+ .btn1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--secon-bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--hover-color);
+}
+.btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn1:hover::before {
+    width: 100%;
+}
+.btn1 {
+    background: var(--bg-color);
+    color: var(--hover-color);
+
+}
+
+.btn1:hover {
+    color: var(--bg-color);
+}
+
+.btn1::before {
+    background: var(--hover-color);
+}
 
 .about-content span {
     color: #fdfdfd;
